@@ -6,6 +6,9 @@ import { ApplyComponent } from './pages/apply/apply.component';
 import { ArchiversComponent } from './pages/archivers/archivers.component';
 import { ActivitiesComponent } from './pages/activities/activities.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { TeamComponent } from './pages/team/team.component';
+import { GovernComponent } from './pages/govern/govern.component';
+import { VacanciesComponent } from './pages/vacancies/vacancies.component';
 
 export const routes: Routes = [
     
@@ -28,6 +31,10 @@ export const routes: Routes = [
         title:"about",
         component: AboutComponent,
     },
+
+    { path: 'about/team', component: TeamComponent },
+    { path: 'about/govern', component: GovernComponent },
+    { path: 'about/vacancies', component: VacanciesComponent},
 
     {
         path: "archivers",
