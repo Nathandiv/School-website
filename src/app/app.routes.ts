@@ -4,7 +4,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ApplyComponent } from './pages/apply/apply.component';
 import { ArchiversComponent } from './pages/archivers/archivers.component';
-import { ActivitiesComponent } from './pages/activities/activities.component';
+import { AdmissionComponent } from './pages/admission/admission.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { TeamComponent } from './pages/team/team.component';
 import { GovernComponent } from './pages/govern/govern.component';
@@ -43,9 +43,9 @@ export const routes: Routes = [
     },
 
     {
-        path: "activities",
-        title:"activities",
-        component: ActivitiesComponent,
+        path: "Admission",
+        title:"Admission",
+        component: AdmissionComponent,
     },
 
     {

@@ -3,12 +3,12 @@ import { FooterComponent } from '../../UI/Shared-UI/footer/footer.component';
 import { NavbarComponent } from '../../UI/Shared-UI/navbar/navbar.component';
 
 @Component({
-  selector: 'app-activities',
+  selector: 'app-admission',
   standalone: true,
   imports: [NavbarComponent,FooterComponent],
-  templateUrl: './activities.component.html',
-  styleUrl: './activities.component.css'
+  templateUrl: './admission.component.html',
+  styleUrl: './admission.component.css'
 })
-export class ActivitiesComponent {
+export class AdmissionComponent {
 
 }
