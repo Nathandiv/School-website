@@ -4,14 +4,7 @@
 }
 
 /* Center the .tab-wrap div inside its parent container */
-.container {
-    display: flex;
-    justify-content: center;  /* Centers horizontally */
-    align-items: center;      /* Centers vertically */
-    height: 100px;            /* Ensures it takes full viewport height */
-    margin: 0;                /* Removes any default margin */
-    background-color: red;
-}
+
 
 /* The tab-wrap styles remain unchanged */
 .tab-wrap {
@@ -19,7 +12,9 @@
     border-radius: var(--tab-wrap-border-radius);
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
     list-style: none;
     background-color: #fff;
     margin: 40px 0;
