@@ -1,12 +1,21 @@
 :root {
     --max-tab-count: 5;
     --tab-wrap-border-radius: 6px;
-  }
-  
-  .tab-wrap {
+}
+
+/* Center the .tab-wrap div inside its parent container */
+.container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Ensures it takes full viewport height */
+    margin: 0;                /* Removes any default margin */
+}
+
+/* The tab-wrap styles remain unchanged */
+.tab-wrap {
     transition: 0.3s box-shadow ease;
     border-radius: var(--tab-wrap-border-radius);
-    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -14,13 +23,28 @@
     background-color: #fff;
     margin: 40px 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  }
-  
-  .tab-wrap:hover {
+    width: 80%;   /* Adjust width for responsiveness */
+    max-width: 900px;  /* Original size on larger screens */
+}
+
+@media (max-width: 1200px) {
+    .tab-wrap {
+        width: 90%;  /* Slightly reduced width on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .tab-wrap {
+        width: 100%;  /* Full width on small screens */
+    }
+}
+
+/* Other styles remain unchanged */
+.tab-wrap:hover {
     box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
-  }
-  
-  .tab-wrap .tab__content {
+}
+
+.tab-wrap .tab__content {
     padding: 10px 25px;
     background-color: transparent;
     position: absolute;
@@ -30,24 +54,24 @@
     left: 0;
     transform: translateY(-3px);
     border-radius: var(--tab-wrap-border-radius);
-  }
-  
-  .tab {
+}
+
+.tab {
     display: none;
-  }
-  
-  .tab:checked + label {
+}
+
+.tab:checked + label {
     background-color: #fff;
     box-shadow: 0 -1px 0 #fff inset;
     cursor: default;
-  }
-  
-  .tab:checked + label:hover {
+}
+
+.tab:checked + label:hover {
     box-shadow: 0 -1px 0 #fff inset;
     background-color: #fff;
-  }
-  
-  .tab + label {
+}
+
+.tab + label {
     box-shadow: 0 -1px 0 #eee inset;
     border-radius: var(--tab-wrap-border-radius) var(--tab-wrap-border-radius) 0 0;
     cursor: pointer;
@@ -62,18 +86,18 @@
     height: 50px;
     box-sizing: border-box;
     padding: 15px;
-  }
-  
-  .tab + label:hover {
+}
+
+.tab + label:hover {
     background-color: #f9f9f9;
     box-shadow: 0 1px 0 #f4f4f4 inset;
-  }
-  
-  .tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1),
-  .tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2),
-  .tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3),
-  .tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4),
-  .tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
+}
+
+.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1),
+.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2),
+.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3),
+.tab:checked:nth-of-type(4) ~ .tab__content:nth-of-type(4),
+.tab:checked:nth-of-type(5) ~ .tab__content:nth-of-type(5) {
     opacity: 1;
     transition: 0.5s opacity ease-in, 0.8s transform ease;
     position: relative;
@@ -81,19 +105,18 @@
     z-index: 100;
     transform: translateY(0px);
     text-shadow: 0 0 0;
-  }
-  
-  .tab:first-of-type:not(:last-of-type) + label {
+}
+
+.tab:first-of-type:not(:last-of-type) + label {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-  }
-  
-  .tab:not(:first-of-type):not(:last-of-type) + label {
+}
+
+.tab:not(:first-of-type):not(:last-of-type) + label {
     border-radius: 0;
-  }
-  
-  .tab:last-of-type:not(:first-of-type) + label {
+}
+
+.tab:last-of-type:not(:first-of-type) + label {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-  }
-  
+}
