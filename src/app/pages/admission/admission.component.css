@@ -8,8 +8,9 @@
     display: flex;
     justify-content: center;  /* Centers horizontally */
     align-items: center;      /* Centers vertically */
-    height: 100vh;            /* Ensures it takes full viewport height */
+    height: 100px;            /* Ensures it takes full viewport height */
     margin: 0;                /* Removes any default margin */
+    background-color: red;
 }
 
 /* The tab-wrap styles remain unchanged */
